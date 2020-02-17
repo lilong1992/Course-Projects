@@ -1,0 +1,15 @@
+package edu.duke.ece651.SallyStashGame;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class DisplayTest {
+  @Test
+  public void test_print_oneboard() {
+    Display dp = new Display();
+    Board b = new Board();
+    //dp.print_oneboard(b);
+  }
+
+}
