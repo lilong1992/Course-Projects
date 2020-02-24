@@ -1,0 +1,17 @@
+package edu.duke.ece651.SallyStashGame;
+
+public class Player {
+  public int sonar;
+  public int move;
+  public int goldremain;
+  public String name;
+
+  public Player(String name_str) {
+    sonar = 3;
+    move = 3;
+    goldremain = 37;
+    name = name_str;
+    
+  }
+
+}

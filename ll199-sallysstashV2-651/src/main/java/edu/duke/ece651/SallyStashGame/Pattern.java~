@@ -1,0 +1,10 @@
+package edu.duke.ece651.SallyStashGame;
+
+import java.util.ArrayList;
+
+interface Pattern {
+  String getColor();
+  char getColorchar();
+  ArrayList<BoardCoord> getPatternH();
+  ArrayList<BoardCoord> getPatternV();
+}

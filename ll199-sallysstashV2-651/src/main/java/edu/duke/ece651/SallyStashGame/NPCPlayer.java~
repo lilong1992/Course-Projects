@@ -1,0 +1,16 @@
+package edu.duke.ece651.SallyStashGame;
+
+import java.util.ArrayList;
+
+public class NPCPlayer extends Player {
+  public NPCPlayer(String name_str) {
+    this.sonar = 3;
+    this.move = 3;
+    this.goldremain = 43;
+    this.name = name_str;
+    this.ex_board = new Board();
+    this.hid_board = new Board();
+    this.positionofgold = new ArrayList<ArrayList<BoardCoord>>();
+    this.isHuman = false;
+  }
+}

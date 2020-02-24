@@ -1,0 +1,36 @@
+package edu.duke.ece651.SallyStashGame;
+
+public class BoardCoord {
+  public int x;
+  public int y;
+
+  public BoardCoord() {
+    this.x = 0;
+    this.y = 0;
+  }
+
+  public BoardCoord(int xCoord, int yCoord) {
+    this.x = xCoord;
+    this.y = yCoord;
+  }
+
+  public void setCorrd(int xCoord, int yCoord) {
+    this.x = xCoord;
+    this.y = yCoord;
+  }
+
+  public int getX() {
+    return x;
+  }
+
+  public int getY() {
+    return y;
+  }
+
+  public BoardCoord add(BoardCoord bc) {
+    BoardCoord sum = new BoardCoord(0, 0);
+    sum.setCorrd(this.x+bc.getX(), this.y+bc.getY());
+    return sum;
+  }
+  
+}

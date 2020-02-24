@@ -1,0 +1,52 @@
+package edu.duke.ece651.SallyStashGame;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class SonarStack implements Pattern {
+  private ArrayList<BoardCoord> pattern;
+  private HashSet<Character> mode;
+
+  public SonarStack() {
+    pattern = new ArrayList<BoardCoord>();
+    for (int i = -3; i < 4; i++) {
+      pattern.add(new BoardCoord(0, i));
+    }
+    for (int i = -2; i < 3; i++) {
+      pattern.add(new BoardCoord(1, i));
+      pattern.add(new BoardCoord(-1, i));
+    }
+    for (int i = -1; i < 2; i++) {
+      pattern.add(new BoardCoord(2, i));
+      pattern.add(new BoardCoord(-2, i));
+    }
+    pattern.add(new BoardCoord(-3, 0));
+    pattern.add(new BoardCoord(3, 0));
+
+    mode = new HashSet<Character>();
+    mode.add('O');
+  }
+
+  @Override
+	public String getColor() {
+		return "Sonar";
+	}
+
+
+	@Override
+	public char getColorchar() {
+		return '*';
+	}
+
+	@Override
+	public HashSet<Character> getMode() {
+		return mode;
+	}
+
+	@Override
+	public ArrayList<BoardCoord> getPattern(char c) {
+     
+      return pattern;
+	}
+  
+}

@@ -1,0 +1,46 @@
+package edu.duke.ece651.SallyStashGame;
+
+import java.util.ArrayList;
+
+public class GreenStack implements Pattern {
+  ArrayList<BoardCoord> patternh;
+  ArrayList<BoardCoord> patternv;
+  
+  public GreenStack() {
+    patternh = new ArrayList<BoardCoord>();
+    patternv = new ArrayList<BoardCoord>();
+    
+    BoardCoord bch1 = new BoardCoord(0, 0);
+    BoardCoord bch2 = new BoardCoord(0, 1);
+
+    BoardCoord bcv1 = new BoardCoord(0, 0);
+    BoardCoord bcv2 = new BoardCoord(1, 0);
+
+    patternh.add(bch1);
+    patternh.add(bch2);
+
+    patternv.add(bcv1);
+    patternv.add(bcv2);
+  }
+
+	@Override
+	public String getColor() {
+		return "Green";
+	}
+
+	@Override
+	public ArrayList<BoardCoord> getPatternH() {
+		return patternh;
+	}
+
+	@Override
+	public ArrayList<BoardCoord> getPatternV() {
+		return patternv;
+	}
+
+	@Override
+	public char getColorchar() {
+		return 'g';
+	}
+  
+}

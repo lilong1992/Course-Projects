@@ -1,0 +1,14 @@
+package edu.duke.ece651.SallyStashGame;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class BoardTest {
+  @Test
+  public void test_Board_initilalization() {
+    Board b = new Board();
+    assertEquals(' ', b.grid[0][0]);
+  }
+
+}

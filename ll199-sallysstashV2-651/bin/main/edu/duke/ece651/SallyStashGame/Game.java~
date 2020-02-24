@@ -1,0 +1,43 @@
+package edu.duke.ece651.SallyStashGame;
+
+import java.util.Scanner;
+
+public class Game {
+  Player p1;
+  Player p2;
+  Display dp;
+  
+  public Game() {
+    this.dp = new Display(); 
+    this.p1 = new Player("A");
+    this.p2 = new Player("B");
+    p1.setRival(p2);
+    p2.setRival(p1);
+    playerPrepare(p1);
+    dp.print_refreshscreen();
+    playerPrepare(p2);
+  }
+
+  public void playerPrepare(Player p) {
+    
+    dp.print_welcome_msg(p.name, p.rival.name);
+    //place the green stack
+    GreenStack gs = new GreenStack();
+    int nofgs=2;
+    setPatterns(p, nofgs, gs);
+
+    
+    
+  }
+
+  public void setPatterns(Player p, int times, Pattern pat) {
+    for (int i = 0; i < times; i++) {
+      dp.print_asktoputstack(i+1, p.name, pat.getColor());
+      Scanner sc = new Scanner(System.in);
+      String str = sc.nextLine();
+    }
+  }
+  public void run() {
+    
+  }
+}

@@ -1,0 +1,39 @@
+package edu.duke.ece651.SallyStashGame;
+
+public class Display {
+  private static final int ROWS = 20;
+  private static final int COLUMNS=10;
+  public Display() {
+  }
+
+  public void print_boardUDside(boolean nextline) {
+    System.out.print("  0");
+    for (int i = 1; i < COLUMNS; i++) {
+      System.out.print("|");
+      System.out.print(i);
+    }
+    if (nextline) {
+      System.out.print("\n");
+    }
+  }
+  
+  public void print_oneboard(Board b) {
+    this.print_boardUDside(true);
+    for (int i = 0; i < ROWS; i++) {
+      int c = 'A' + i;
+      System.out.print((char) c + " ");
+      System.out.print(b.grid[i][0]);
+      for (int j = 1; j < COLUMNS; j++) {
+        System.out.print("|" + b.grid[i][j]);
+      }
+      System.out.print(" " + (char) c + "\n");
+    }
+    this.print_boardUDside(true);
+  }
+
+
+
+
+
+  
+}

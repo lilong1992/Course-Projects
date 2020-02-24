@@ -1,0 +1,14 @@
+package edu.duke.ece651.SallyStashGame;
+
+public class InputCheck {
+
+  public InputCheck() {
+  }
+
+  public boolean placement_inputcheck(String s) {
+    if (s.length() != 3) {
+      System.out.println("Expected input length = 3, but saw "+s.length());
+      return false;
+    }
+  }
+}
